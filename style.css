@@ -1,0 +1,159 @@
+:root{
+    --branco-principal: #ffffff;
+    --cinza-secundario: #c0c0c0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+    --fonte-principal:'inter';
+    --botao-azul-efeito:#3c92fa;
+}
+body{
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);/*Estou acresentando essas fontes no Body porque ele é o pai de todos, ou seja todos eles irão receber esses valores*/
+    font-size: 14px;
+    font-weight: 400px ;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.principal{  
+    background-image: url(img/Background.png); /* Quando quero colocar uma imagem de fundo*/
+    background-repeat: no-repeat; /* background-reapeat - significa repetição do background. no-repeat significa - Não quero que repita.*/
+    background-size: contain; /* Alterei o tamanho do background e coloquei container - para preencher ele */
+    align-items: center;/* Coloquei o align-items que significa alinhar itens*/
+    text-align: center; /*Coloquei o text-align para alinhar todo o texto ao centro*/
+}
+.container{
+    height: 100vh;
+    display: grid; /* O Grid ele separa os elementos da tela por espaço em linhas - por isso que criei o div no html pra ficar todos juntos */
+    grid-template-columns: 50% 50%; /* Coloquei o grid-template-columns, comm isso ele agora vai ocupar espaço em colunas */
+
+}
+.container__botao{
+    background-color: var(--botao-azul); /* Caoloquei uma cor de fundo com a variavel botão-azul*/
+    border-radius: 5px; /* coloquei o border-radius ele arredonda as bordas dos botões*/
+    padding: 1em; /* coloquei o padding 1em ele fica do tamanho da fonte */
+    color: var(--branco-principal); /* coloquei uma escrita em branco*/
+    display: block;
+    text-decoration: none; /*Com isso eu tiro as decorações dos meus textos*/
+    margin-bottom: 1em; /* Coloquei margin-bottom para dá um espacamento entre as bordas.*/
+}
+
+.botao_secundario{
+    background-color: transparent;
+    border: 2px solid var(--branco-principal); /* 2px é o tamanho da borda, Solid é porque eu quero a linha solida, ele tem outras opções como tracejado e pontilhado, e colocamos a cor branca do variavel. */
+}
+
+.container__aviso{
+    font-size: 12px;
+    color:var(--cinza-secundario);
+}
+
+.container__titulo{
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.container__imagem{
+    margin: 1em 0 2em 0; /* Coloquei 4 valores, esses valores funciona como o relogio no sentido horario. meio dia eu coloquei como 1em,depois as três horas no lado direito 0em depois 2em que seria as seis horas do relogio e por ultimo as 9 horas do relogio coloquei 0em.*/
+
+} 
+
+.container__caixa{
+    margin: 0 6em; /* o zero é o topo e em baixo o segundo é a esquerda e a direita, coloquei esses dois valores. Estou mostrando varias diferencias de construi-lo*/
+
+
+}
+
+.secundario__imagem{
+    width: 80%;
+}
+
+.secundario{
+    align-items: center;
+    margin: 0 10em;
+}
+
+.descricao__titulo{
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em; /* 0.1em ele dá uma afastamento entre um elemento e outro*/
+}
+
+.descricao__texto{
+    color: var(--cinza-secundario);
+
+}
+
+.secundario__botao{
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.container__descricao{
+    padding: 2em;
+}
+
+.dispositivos__listas{
+    display: flex; /* O display flex ele fez todos os dispositivos ficar um ao lado do outro, ou seja na mesma linha*/
+    justify-content: center;
+    list-style-type: none; /* list-style-type é um tipo de estilo da lista, so que eu coloquei como nehum estilo(none) nao quero estilo pra essa lista*/
+    margin: 5em 0;
+}
+.dispositivos{ /* Vamos agora centralizar tudo para que todos os dispositivos fiquem ao centro*/
+    text-align: center;
+}
+.dispositivos__titulo{
+    font-size: 40px;
+    color: var(--branco-principal); /* o texto já está branco, mas no futuro caso eu queira trocar já sei onde está, ou seja não fico batendo cabeça.*/
+}
+.listas__item{
+    font-size: 25px;
+    color: var(--branco-principal);
+
+}
+
+.rodape{
+    text-align: center;
+    margin: 5em 3em;
+    
+}
+
+.rodape__lista{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 1em;
+    
+}
+
+.lista__link a{
+    text-decoration: none;
+    color: var(--branco-principal);
+    margin-left: 1em;
+}
+
+.rodape__texto{
+    margin: 1em 0;
+    color: var(--cinza-secundario);
+    font-size: 14px;
+}
+
+.lista__link a:hover{
+    color: var(--botao-azul); /* Com o hover eu acabo de colocar efeitos nos textos.Ao passar o mouse por cima dos textos ficaram da cor azul.*/
+
+}
+
+.container__botao:hover{
+    background-color: var(--botao-azul-efeito);
+    color:var(--cor-de-fundo);
+}
+
+
+
+
+
